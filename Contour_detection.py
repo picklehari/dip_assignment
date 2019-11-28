@@ -3,9 +3,8 @@ import numpy as np
 
 image = cv2.imread('images.jpg') 
 cv2.waitKey(0) 
-
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
-
+gray = cv2.blur(gray,(4,5))
 edged = cv2.Canny(gray, 30, 200) 
 cv2.waitKey(0) 
 
